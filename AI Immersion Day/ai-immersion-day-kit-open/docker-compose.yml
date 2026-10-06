@@ -1,0 +1,44 @@
+# Whole room on one machine with a GPU:   docker compose up -d
+# then pull the models once:              docker compose exec ollama ollama pull qwen3:8b
+#                                         docker compose exec ollama ollama pull qwen2.5vl:7b
+#                                         docker compose exec ollama ollama pull nomic-embed-text
+# Lab app:    http://<server>:8501      No-code chat (Open WebUI): http://<server>:3000
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["11434:11434"]
+    volumes: [ollama:/root/.ollama]
+    environment:
+      - OLLAMA_NUM_PARALLEL=4          # several tables at once
+      - OLLAMA_MAX_LOADED_MODELS=3     # text + vision + embeddings stay warm
+    # GPU (NVIDIA): uncomment. On Apple Silicon, run Ollama natively instead of in Docker.
+    # deploy: {resources: {reservations: {devices: [{driver: nvidia, count: all, capabilities: [gpu]}]}}}
+
+  lab-app:
+    build: .
+    ports: ["8501:8501"]
+    environment:
+      - LLM_PROVIDER=local
+      - LLM_BASE_URL=http://ollama:11434/v1
+      - LLM_MODEL=qwen3:8b
+      - VISION_MODEL=qwen2.5vl:7b
+      - EMBED_MODEL=nomic-embed-text
+    volumes: [./workspace:/app/workspace]
+    depends_on: [ollama]
+
+  open-webui:                          # optional no-code track
+    image: ghcr.io/open-webui/open-webui:main
+    ports: ["3000:8080"]
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes: [open-webui:/app/backend/data]
+    depends_on: [ollama]
+
+  mcpo:                                # optional: exposes the catalogue MCP server to Open WebUI as a tool server
+    build: .
+    command: ["sh", "-c", "pip install --no-cache-dir mcpo && mcpo --port 8000 -- python module2_multimodal/mcp_server/catalogue_server.py"]
+    ports: ["8000:8000"]
+
+volumes:
+  ollama: {}
+  open-webui: {}

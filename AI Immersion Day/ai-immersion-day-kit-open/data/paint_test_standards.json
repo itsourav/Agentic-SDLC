@@ -1,0 +1,19 @@
+{
+  "_about": "Template library used by Module 3 to generate a body-colour test specification. Values are illustrative and should be replaced by the customer's own materials engineering standards.",
+  "spec_template_id": "MTS-PAINT-2027",
+  "tests": [
+    {"id": "T01", "name": "Colour match vs master panel", "method": "Spectrophotometer, multi-angle (15/45/110 deg), CIELAB, D65/10 deg", "standard": "ASTM E2194 / internal MTS-C01", "metric": "Delta E*ab", "default_limit": "<= 1.0 (solid), <= 1.2 (metallic/pearl)", "sample_size": "5 panels per batch", "frequency": "Every paint batch"},
+    {"id": "T02", "name": "Gloss", "method": "Glossmeter at 20 deg", "standard": "ISO 2813", "metric": "Gloss units (GU)", "default_limit": ">= 85 GU", "sample_size": "3 readings x 5 panels", "frequency": "Every shift"},
+    {"id": "T03", "name": "Dry film thickness", "method": "Magnetic induction gauge", "standard": "ISO 2808", "metric": "micrometres", "default_limit": "Basecoat 12-20 um, clearcoat 35-50 um", "sample_size": "10 points per body", "frequency": "1 body per hour"},
+    {"id": "T04", "name": "Adhesion (cross-cut)", "method": "Cross-hatch 1 mm grid + tape pull", "standard": "ISO 2409", "metric": "Classification 0-5", "default_limit": "Class 0 or 1", "sample_size": "3 panels", "frequency": "Daily"},
+    {"id": "T05", "name": "Corrosion - neutral salt spray", "method": "Scribed panels in NSS cabinet", "standard": "ISO 9227", "metric": "Creep from scribe (mm) after 720 h", "default_limit": "<= 2 mm", "sample_size": "3 panels", "frequency": "Per new colour / quarterly"},
+    {"id": "T06", "name": "Accelerated weathering", "method": "Xenon arc exposure", "standard": "ISO 16474-2", "metric": "Delta E and gloss retention after 2,000 h", "default_limit": "Delta E <= 2.0; gloss retention >= 80%", "sample_size": "3 panels", "frequency": "Per new colour"},
+    {"id": "T07", "name": "Stone-chip resistance", "method": "Gravelometer", "standard": "SAE J400", "metric": "Chip rating", "default_limit": ">= 7B", "sample_size": "3 panels", "frequency": "Per new colour"}
+  ],
+  "finish_adjustments": {
+    "metallic": "Apply flop-index check (T01b): flop index within +/- 1.0 of master.",
+    "pearl": "Apply multi-angle sparkle/graininess check (T01c) with BYK-mac or equivalent.",
+    "fluorescent": "NOT RELEASABLE: fluorescent pigments fail T06. Flag for design deviation.",
+    "solid": "No additional checks."
+  }
+}

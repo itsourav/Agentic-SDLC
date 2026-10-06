@@ -1,0 +1,17 @@
+{
+  "_about": "Module 5 end-of-line quality checklist. 'method' tells the harness who can verify the item: vision (AI on the photo), physical (human), or both.",
+  "checklist_id": "EOL-QC-2027-LEGO",
+  "items": [
+    {"id": "QC-01", "check": "Body colour matches specified paint", "method": "vision", "severity": "critical", "spec_field": "body_colour"},
+    {"id": "QC-02", "check": "Door colour matches specification (two doors)", "method": "vision", "severity": "major", "spec_field": "door_colour"},
+    {"id": "QC-03", "check": "Two mirrors fitted in specified finish", "method": "vision", "severity": "major", "spec_field": "mirror_colour"},
+    {"id": "QC-04", "check": "Bonnet feature matches specification", "method": "vision", "severity": "major", "spec_field": "bonnet_design"},
+    {"id": "QC-05", "check": "Four wheels fitted, matching specified style", "method": "vision", "severity": "critical", "spec_field": "tyre_style"},
+    {"id": "QC-06", "check": "Windscreen fitted", "method": "vision", "severity": "critical"},
+    {"id": "QC-07", "check": "Headlights and tail lights fitted", "method": "vision", "severity": "major"},
+    {"id": "QC-08", "check": "Shake test: no loose bricks after 3 gentle shakes", "method": "physical", "severity": "critical"},
+    {"id": "QC-09", "check": "All wheels rotate freely", "method": "physical", "severity": "major"},
+    {"id": "QC-10", "check": "Left/right symmetry (mirrors, doors, lights)", "method": "vision", "severity": "minor"}
+  ],
+  "release_rule": "Car is RELEASED only if there are zero critical or major failures and every physical check has been signed off by a human inspector."
+}

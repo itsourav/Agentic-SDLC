@@ -1,0 +1,7 @@
+httpx>=0.27               # talks to any OpenAI-compatible model server (Ollama, vLLM, llama.cpp, LM Studio)
+mcp>=1.10                 # Model Context Protocol server + client (MIT)
+networkx>=3.2             # knowledge graph (BSD)
+streamlit>=1.40           # lab app UI (Apache 2.0)
+pandas>=2.0
+pillow>=10.0
+python-dotenv>=1.0

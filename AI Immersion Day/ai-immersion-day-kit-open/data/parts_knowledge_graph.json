@@ -1,0 +1,1137 @@
+{
+ "_about": "Meridian Motors parts knowledge graph (fictional). Nodes: Option (customer-facing spec choice), Part, Supplier. Edges: REQUIRES, SUPPLIED_BY, ALTERNATIVE. unit_cost_eur is CONFIDENTIAL and must never be disclosed by agents (see guardrails).",
+ "confidential_fields": [
+  "unit_cost_eur"
+ ],
+ "nodes": [
+  {
+   "id": "RR-301",
+   "type": "Option",
+   "name": "Rosso Racing Red paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "CR-305",
+   "type": "Option",
+   "name": "Crimson Velvet paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "MB-118",
+   "type": "Option",
+   "name": "Midnight Sapphire paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "GW-001",
+   "type": "Option",
+   "name": "Glacier White paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "OB-900",
+   "type": "Option",
+   "name": "Obsidian Black paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "LS-450",
+   "type": "Option",
+   "name": "Lunar Silver paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "VL-777",
+   "type": "Option",
+   "name": "Volt Lime paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "UV-610",
+   "type": "Option",
+   "name": "Ultraviolet paint",
+   "attribute": "body_colour"
+  },
+  {
+   "id": "MR-BODY",
+   "type": "Option",
+   "name": "Body-colour mirror caps",
+   "attribute": "mirror_colour"
+  },
+  {
+   "id": "MR-GB",
+   "type": "Option",
+   "name": "Gloss black mirror caps",
+   "attribute": "mirror_colour"
+  },
+  {
+   "id": "MR-SILVER",
+   "type": "Option",
+   "name": "Lunar Silver mirror caps",
+   "attribute": "mirror_colour"
+  },
+  {
+   "id": "MR-CARBON",
+   "type": "Option",
+   "name": "Carbon mirror caps",
+   "attribute": "mirror_colour",
+   "requires_trim": "GT"
+  },
+  {
+   "id": "BN-FLAT",
+   "type": "Option",
+   "name": "Flat bonnet",
+   "attribute": "bonnet_design"
+  },
+  {
+   "id": "BN-DOME",
+   "type": "Option",
+   "name": "Power-dome bonnet",
+   "attribute": "bonnet_design"
+  },
+  {
+   "id": "BN-VENT",
+   "type": "Option",
+   "name": "Vented bonnet",
+   "attribute": "bonnet_design"
+  },
+  {
+   "id": "BN-SCOOP",
+   "type": "Option",
+   "name": "Bonnet scoop",
+   "attribute": "bonnet_design",
+   "requires_trim": "GT"
+  },
+  {
+   "id": "BN-STRIPE",
+   "type": "Option",
+   "name": "Striped bonnet",
+   "attribute": "bonnet_design"
+  },
+  {
+   "id": "WH-5S-19",
+   "type": "Option",
+   "name": "19in Aero 5-spoke wheel set",
+   "attribute": "tyre_style"
+  },
+  {
+   "id": "WH-MS-20",
+   "type": "Option",
+   "name": "20in Multi-spoke wheel set",
+   "attribute": "tyre_style"
+  },
+  {
+   "id": "WH-AT-18",
+   "type": "Option",
+   "name": "18in All-terrain wheel set",
+   "attribute": "tyre_style",
+   "requires_body": "SUV"
+  },
+  {
+   "id": "WH-TB-19",
+   "type": "Option",
+   "name": "19in Turbine wheel set",
+   "attribute": "tyre_style"
+  },
+  {
+   "id": "WH-ST-16",
+   "type": "Option",
+   "name": "16in Steel wheel set",
+   "attribute": "tyre_style"
+  },
+  {
+   "id": "PR-01",
+   "type": "Part",
+   "name": "Epoxy primer",
+   "category": "paint",
+   "lead_time_days": 14,
+   "stock_weeks": 6,
+   "unit_cost_eur": 3.1
+  },
+  {
+   "id": "CC-02",
+   "type": "Part",
+   "name": "2K clearcoat",
+   "category": "paint",
+   "lead_time_days": 21,
+   "stock_weeks": 5,
+   "unit_cost_eur": 4.4
+  },
+  {
+   "id": "PG-RED-01",
+   "type": "Part",
+   "name": "Pyrrole red pigment",
+   "category": "pigment",
+   "lead_time_days": 42,
+   "stock_weeks": 3,
+   "unit_cost_eur": 9.8
+  },
+  {
+   "id": "PG-RED-02",
+   "type": "Part",
+   "name": "Quinacridone red pigment (alt)",
+   "category": "pigment",
+   "lead_time_days": 28,
+   "stock_weeks": 8,
+   "unit_cost_eur": 11.2
+  },
+  {
+   "id": "PG-BLU-02",
+   "type": "Part",
+   "name": "Phthalo blue pigment",
+   "category": "pigment",
+   "lead_time_days": 21,
+   "stock_weeks": 7,
+   "unit_cost_eur": 7.5
+  },
+  {
+   "id": "PG-TIO2",
+   "type": "Part",
+   "name": "Titanium dioxide white",
+   "category": "pigment",
+   "lead_time_days": 30,
+   "stock_weeks": 9,
+   "unit_cost_eur": 2.2
+  },
+  {
+   "id": "PEARL-MICA",
+   "type": "Part",
+   "name": "Pearl mica effect",
+   "category": "pigment",
+   "lead_time_days": 45,
+   "stock_weeks": 4,
+   "unit_cost_eur": 6.0
+  },
+  {
+   "id": "PG-CARB-BLK",
+   "type": "Part",
+   "name": "Carbon black pigment",
+   "category": "pigment",
+   "lead_time_days": 14,
+   "stock_weeks": 10,
+   "unit_cost_eur": 1.4
+  },
+  {
+   "id": "MF-AL-FLAKE",
+   "type": "Part",
+   "name": "Aluminium flake (metallic effect)",
+   "category": "pigment",
+   "lead_time_days": 60,
+   "stock_weeks": 3,
+   "unit_cost_eur": 8.9
+  },
+  {
+   "id": "PG-FLUO-GRN",
+   "type": "Part",
+   "name": "Fluorescent green pigment",
+   "category": "pigment",
+   "lead_time_days": 90,
+   "stock_weeks": 0,
+   "unit_cost_eur": 22.0
+  },
+  {
+   "id": "PG-VIO-01",
+   "type": "Part",
+   "name": "Dioxazine violet pigment",
+   "category": "pigment",
+   "lead_time_days": 49,
+   "stock_weeks": 2,
+   "unit_cost_eur": 14.5
+  },
+  {
+   "id": "MIR-HOUSING",
+   "type": "Part",
+   "name": "Mirror housing & cap",
+   "category": "mirror",
+   "lead_time_days": 21,
+   "stock_weeks": 6,
+   "unit_cost_eur": 18.0
+  },
+  {
+   "id": "MIR-ACT",
+   "type": "Part",
+   "name": "Power-fold mirror actuator",
+   "category": "mirror",
+   "lead_time_days": 35,
+   "stock_weeks": 4,
+   "unit_cost_eur": 26.0
+  },
+  {
+   "id": "CF-PREPREG",
+   "type": "Part",
+   "name": "Carbon fibre prepreg",
+   "category": "material",
+   "lead_time_days": 56,
+   "stock_weeks": 2,
+   "unit_cost_eur": 61.0
+  },
+  {
+   "id": "CHIP-MCU-7",
+   "type": "Part",
+   "name": "MCU-7 automotive microcontroller",
+   "category": "electronics",
+   "lead_time_days": 120,
+   "stock_weeks": 2,
+   "unit_cost_eur": 4.8
+  },
+  {
+   "id": "CHIP-MCU-9",
+   "type": "Part",
+   "name": "MCU-9 microcontroller (second source)",
+   "category": "electronics",
+   "lead_time_days": 70,
+   "stock_weeks": 5,
+   "unit_cost_eur": 5.6
+  },
+  {
+   "id": "BP-AL-02",
+   "type": "Part",
+   "name": "Aluminium bonnet panel",
+   "category": "body",
+   "lead_time_days": 35,
+   "stock_weeks": 4,
+   "unit_cost_eur": 142.0
+  },
+  {
+   "id": "BP-ST-01",
+   "type": "Part",
+   "name": "Steel bonnet panel (flat)",
+   "category": "body",
+   "lead_time_days": 21,
+   "stock_weeks": 8,
+   "unit_cost_eur": 64.0
+  },
+  {
+   "id": "BP-ST-02",
+   "type": "Part",
+   "name": "Steel bonnet panel (power dome)",
+   "category": "body",
+   "lead_time_days": 21,
+   "stock_weeks": 6,
+   "unit_cost_eur": 71.0
+  },
+  {
+   "id": "RM-AL-6061",
+   "type": "Part",
+   "name": "Aluminium coil 6061",
+   "category": "raw_material",
+   "lead_time_days": 84,
+   "stock_weeks": 3,
+   "unit_cost_eur": 3.9
+  },
+  {
+   "id": "RM-AL-6061-R",
+   "type": "Part",
+   "name": "Recycled aluminium coil 6061 (alt)",
+   "category": "raw_material",
+   "lead_time_days": 45,
+   "stock_weeks": 4,
+   "unit_cost_eur": 4.3
+  },
+  {
+   "id": "RM-AL-A356",
+   "type": "Part",
+   "name": "Aluminium casting alloy A356",
+   "category": "raw_material",
+   "lead_time_days": 84,
+   "stock_weeks": 3,
+   "unit_cost_eur": 3.2
+  },
+  {
+   "id": "SCOOP-INS",
+   "type": "Part",
+   "name": "Bonnet scoop insert",
+   "category": "body",
+   "lead_time_days": 14,
+   "stock_weeks": 10,
+   "unit_cost_eur": 38.0
+  },
+  {
+   "id": "VENT-INS",
+   "type": "Part",
+   "name": "Bonnet vent louvre insert",
+   "category": "body",
+   "lead_time_days": 14,
+   "stock_weeks": 10,
+   "unit_cost_eur": 22.0
+  },
+  {
+   "id": "STRIPE-VINYL",
+   "type": "Part",
+   "name": "Twin racing stripe vinyl",
+   "category": "trim",
+   "lead_time_days": 7,
+   "stock_weeks": 12,
+   "unit_cost_eur": 45.0
+  },
+  {
+   "id": "AH-01",
+   "type": "Part",
+   "name": "Active pop-up bonnet actuator",
+   "category": "safety",
+   "lead_time_days": 42,
+   "stock_weeks": 3,
+   "unit_cost_eur": 88.0
+  },
+  {
+   "id": "RIM-5S-19",
+   "type": "Part",
+   "name": "19in 5-spoke cast rim",
+   "category": "wheel",
+   "lead_time_days": 28,
+   "stock_weeks": 5,
+   "unit_cost_eur": 115.0
+  },
+  {
+   "id": "RIM-MS-20",
+   "type": "Part",
+   "name": "20in multi-spoke cast rim",
+   "category": "wheel",
+   "lead_time_days": 35,
+   "stock_weeks": 4,
+   "unit_cost_eur": 148.0
+  },
+  {
+   "id": "RIM-AT-18",
+   "type": "Part",
+   "name": "18in all-terrain cast rim",
+   "category": "wheel",
+   "lead_time_days": 28,
+   "stock_weeks": 6,
+   "unit_cost_eur": 104.0
+  },
+  {
+   "id": "RIM-TB-19",
+   "type": "Part",
+   "name": "19in turbine cast rim",
+   "category": "wheel",
+   "lead_time_days": 28,
+   "stock_weeks": 5,
+   "unit_cost_eur": 121.0
+  },
+  {
+   "id": "AERO-COVER",
+   "type": "Part",
+   "name": "Turbine aero cover",
+   "category": "wheel",
+   "lead_time_days": 14,
+   "stock_weeks": 9,
+   "unit_cost_eur": 19.0
+  },
+  {
+   "id": "RIM-ST-16",
+   "type": "Part",
+   "name": "16in steel rim",
+   "category": "wheel",
+   "lead_time_days": 14,
+   "stock_weeks": 12,
+   "unit_cost_eur": 38.0
+  },
+  {
+   "id": "TY-235-40R19",
+   "type": "Part",
+   "name": "Tyre 235/40 R19",
+   "category": "tyre",
+   "lead_time_days": 21,
+   "stock_weeks": 7,
+   "unit_cost_eur": 96.0
+  },
+  {
+   "id": "TY-245-35R20",
+   "type": "Part",
+   "name": "Tyre 245/35 R20",
+   "category": "tyre",
+   "lead_time_days": 28,
+   "stock_weeks": 5,
+   "unit_cost_eur": 124.0
+  },
+  {
+   "id": "TY-AT-265-18",
+   "type": "Part",
+   "name": "All-terrain tyre 265/60 R18",
+   "category": "tyre",
+   "lead_time_days": 35,
+   "stock_weeks": 4,
+   "unit_cost_eur": 131.0
+  },
+  {
+   "id": "TY-205-55R16",
+   "type": "Part",
+   "name": "Tyre 205/55 R16",
+   "category": "tyre",
+   "lead_time_days": 14,
+   "stock_weeks": 12,
+   "unit_cost_eur": 58.0
+  },
+  {
+   "id": "TPMS-01",
+   "type": "Part",
+   "name": "Tyre pressure sensor",
+   "category": "electronics",
+   "lead_time_days": 49,
+   "stock_weeks": 3,
+   "unit_cost_eur": 21.0
+  },
+  {
+   "id": "S-CHEMCO",
+   "type": "Supplier",
+   "name": "ChromaChem GmbH",
+   "country": "Germany",
+   "risk": "low",
+   "risk_note": ""
+  },
+  {
+   "id": "S-PIGASIA",
+   "type": "Supplier",
+   "name": "Pigmenta Asia Ltd",
+   "country": "India",
+   "risk": "medium",
+   "risk_note": "Single-source for red and fluorescent pigments; monsoon logistics delays"
+  },
+  {
+   "id": "S-ALUWORKS",
+   "type": "Supplier",
+   "name": "AluWorks Castings SA",
+   "country": "Spain",
+   "risk": "medium",
+   "risk_note": "Supplies all cast rims AND aluminium bonnet panels"
+  },
+  {
+   "id": "S-NORDAL",
+   "type": "Supplier",
+   "name": "NordAl Rolling AS",
+   "country": "Norway",
+   "risk": "high",
+   "risk_note": "Energy-price driven allocation; 84-day lead times"
+  },
+  {
+   "id": "S-SEMITW",
+   "type": "Supplier",
+   "name": "TaiSemi Corp",
+   "country": "Taiwan",
+   "risk": "high",
+   "risk_note": "Geopolitical and capacity risk; MCU allocation in force"
+  },
+  {
+   "id": "S-SEMIEU",
+   "type": "Supplier",
+   "name": "EuroSilicon AG",
+   "country": "Germany",
+   "risk": "medium",
+   "risk_note": "Qualified second source for MCU-9 family"
+  },
+  {
+   "id": "S-PLASTX",
+   "type": "Supplier",
+   "name": "PlastX Mouldings Ltd",
+   "country": "United Kingdom",
+   "risk": "low",
+   "risk_note": ""
+  },
+  {
+   "id": "S-TYRECO",
+   "type": "Supplier",
+   "name": "Grip & Co Tyres",
+   "country": "France",
+   "risk": "low",
+   "risk_note": ""
+  },
+  {
+   "id": "S-CARBON",
+   "type": "Supplier",
+   "name": "CarbonLab Srl",
+   "country": "Italy",
+   "risk": "medium",
+   "risk_note": "Small-volume carbon fibre; 8-week autoclave queue"
+  },
+  {
+   "id": "S-MIRRORTEK",
+   "type": "Supplier",
+   "name": "MirrorTek s.r.o.",
+   "country": "Czechia",
+   "risk": "low",
+   "risk_note": ""
+  },
+  {
+   "id": "S-SAFESYS",
+   "type": "Supplier",
+   "name": "SafeSys Restraints",
+   "country": "Sweden",
+   "risk": "low",
+   "risk_note": ""
+  },
+  {
+   "id": "S-STEELCO",
+   "type": "Supplier",
+   "name": "Ferro Steel SA",
+   "country": "Poland",
+   "risk": "low",
+   "risk_note": ""
+  }
+ ],
+ "edges": [
+  {
+   "source": "RR-301",
+   "target": "PG-RED-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RR-301",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RR-301",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "CR-305",
+   "target": "PG-RED-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "CR-305",
+   "target": "MF-AL-FLAKE",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "CR-305",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "CR-305",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MB-118",
+   "target": "PG-BLU-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MB-118",
+   "target": "MF-AL-FLAKE",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MB-118",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MB-118",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "GW-001",
+   "target": "PG-TIO2",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "GW-001",
+   "target": "PEARL-MICA",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "GW-001",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "GW-001",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "OB-900",
+   "target": "PG-CARB-BLK",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "OB-900",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "OB-900",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "LS-450",
+   "target": "MF-AL-FLAKE",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "LS-450",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "LS-450",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "VL-777",
+   "target": "PG-FLUO-GRN",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "VL-777",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "VL-777",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "UV-610",
+   "target": "PG-VIO-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "UV-610",
+   "target": "MF-AL-FLAKE",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "UV-610",
+   "target": "PR-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "UV-610",
+   "target": "CC-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-BODY",
+   "target": "MIR-HOUSING",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-BODY",
+   "target": "MIR-ACT",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-GB",
+   "target": "MIR-HOUSING",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-GB",
+   "target": "MIR-ACT",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-GB",
+   "target": "PG-CARB-BLK",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-SILVER",
+   "target": "MIR-HOUSING",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-SILVER",
+   "target": "MIR-ACT",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-SILVER",
+   "target": "MF-AL-FLAKE",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-CARBON",
+   "target": "MIR-HOUSING",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-CARBON",
+   "target": "MIR-ACT",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MR-CARBON",
+   "target": "CF-PREPREG",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "MIR-ACT",
+   "target": "CHIP-MCU-7",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-FLAT",
+   "target": "BP-ST-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-DOME",
+   "target": "BP-ST-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-VENT",
+   "target": "BP-AL-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-VENT",
+   "target": "VENT-INS",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-SCOOP",
+   "target": "BP-AL-02",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-SCOOP",
+   "target": "SCOOP-INS",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-SCOOP",
+   "target": "AH-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-STRIPE",
+   "target": "BP-ST-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BN-STRIPE",
+   "target": "STRIPE-VINYL",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "BP-AL-02",
+   "target": "RM-AL-6061",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "AH-01",
+   "target": "CHIP-MCU-7",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-5S-19",
+   "target": "RIM-5S-19",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-5S-19",
+   "target": "TY-235-40R19",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-5S-19",
+   "target": "TPMS-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-MS-20",
+   "target": "RIM-MS-20",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-MS-20",
+   "target": "TY-245-35R20",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-MS-20",
+   "target": "TPMS-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-AT-18",
+   "target": "RIM-AT-18",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-AT-18",
+   "target": "TY-AT-265-18",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-AT-18",
+   "target": "TPMS-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-TB-19",
+   "target": "RIM-TB-19",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-TB-19",
+   "target": "AERO-COVER",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-TB-19",
+   "target": "TY-235-40R19",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-TB-19",
+   "target": "TPMS-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-ST-16",
+   "target": "RIM-ST-16",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-ST-16",
+   "target": "TY-205-55R16",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "WH-ST-16",
+   "target": "TPMS-01",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RIM-5S-19",
+   "target": "RM-AL-A356",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RIM-MS-20",
+   "target": "RM-AL-A356",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RIM-AT-18",
+   "target": "RM-AL-A356",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "RIM-TB-19",
+   "target": "RM-AL-A356",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "TPMS-01",
+   "target": "CHIP-MCU-7",
+   "type": "REQUIRES"
+  },
+  {
+   "source": "PR-01",
+   "target": "S-CHEMCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "CC-02",
+   "target": "S-CHEMCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-RED-01",
+   "target": "S-PIGASIA",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-RED-02",
+   "target": "S-CHEMCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-BLU-02",
+   "target": "S-CHEMCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-TIO2",
+   "target": "S-PIGASIA",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PEARL-MICA",
+   "target": "S-PIGASIA",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-CARB-BLK",
+   "target": "S-CHEMCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "MF-AL-FLAKE",
+   "target": "S-NORDAL",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-FLUO-GRN",
+   "target": "S-PIGASIA",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "PG-VIO-01",
+   "target": "S-PIGASIA",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "MIR-HOUSING",
+   "target": "S-MIRRORTEK",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "MIR-ACT",
+   "target": "S-MIRRORTEK",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "CF-PREPREG",
+   "target": "S-CARBON",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "CHIP-MCU-7",
+   "target": "S-SEMITW",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "CHIP-MCU-9",
+   "target": "S-SEMIEU",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "BP-AL-02",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "BP-ST-01",
+   "target": "S-STEELCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "BP-ST-02",
+   "target": "S-STEELCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RM-AL-6061",
+   "target": "S-NORDAL",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RM-AL-6061-R",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RM-AL-A356",
+   "target": "S-NORDAL",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "SCOOP-INS",
+   "target": "S-PLASTX",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "VENT-INS",
+   "target": "S-PLASTX",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "STRIPE-VINYL",
+   "target": "S-PLASTX",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "AH-01",
+   "target": "S-SAFESYS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RIM-5S-19",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RIM-MS-20",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RIM-AT-18",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RIM-TB-19",
+   "target": "S-ALUWORKS",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "AERO-COVER",
+   "target": "S-PLASTX",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "RIM-ST-16",
+   "target": "S-STEELCO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "TY-235-40R19",
+   "target": "S-TYRECO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "TY-245-35R20",
+   "target": "S-TYRECO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "TY-AT-265-18",
+   "target": "S-TYRECO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "TY-205-55R16",
+   "target": "S-TYRECO",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "TPMS-01",
+   "target": "S-MIRRORTEK",
+   "type": "SUPPLIED_BY"
+  },
+  {
+   "source": "CHIP-MCU-7",
+   "target": "CHIP-MCU-9",
+   "type": "ALTERNATIVE",
+   "note": "Requires 12-week software requalification"
+  },
+  {
+   "source": "PG-RED-01",
+   "target": "PG-RED-02",
+   "type": "ALTERNATIVE",
+   "note": "Colour re-match to master panel required (T01)"
+  },
+  {
+   "source": "RM-AL-6061",
+   "target": "RM-AL-6061-R",
+   "type": "ALTERNATIVE",
+   "note": "Approved; +0.4 EUR/kg"
+  }
+ ]
+}

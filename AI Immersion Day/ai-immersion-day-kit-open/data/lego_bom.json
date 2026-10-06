@@ -1,0 +1,42 @@
+{
+  "_about": "Module 5 build kit. Maps the engineering 'dominant spec' option codes to LEGO-compatible bricks so each table can physically build the car. Brick colours are the closest available in a standard LEGO Classic box; facilitators pre-sort bags per colour.",
+  "base_kit": [
+    {"part": "Chassis plate 4x10 (or 2 x 4x6)", "qty": 1, "colour": "any dark"},
+    {"part": "Wheel + tyre", "qty": 4, "colour": "black"},
+    {"part": "Axle plate 2x2 with wheel pins", "qty": 2, "colour": "any"},
+    {"part": "Transparent windscreen slope 2x4", "qty": 1, "colour": "trans-clear"},
+    {"part": "Seat / steering wheel", "qty": 1, "colour": "any", "optional": true},
+    {"part": "Headlight brick 1x1 (or round tile)", "qty": 2, "colour": "white/trans-clear"},
+    {"part": "Tail light tile 1x1", "qty": 2, "colour": "red/trans-red"}
+  ],
+  "by_option": {
+    "body_colour": {"part": "Brick 2x4 (body sides) + Brick 2x2 (rear)", "qty": 8, "colour_from": "body paint"},
+    "door_colour": {"part": "Brick 1x4 (doors)", "qty": 2, "colour_from": "door paint"},
+    "MR-BODY": {"part": "Slope 1x1 or 1x1 clip (mirrors)", "qty": 2, "colour_from": "body paint"},
+    "MR-GB": {"part": "Slope 1x1 or 1x1 clip (mirrors)", "qty": 2, "colour": "black"},
+    "MR-SILVER": {"part": "Slope 1x1 or 1x1 clip (mirrors)", "qty": 2, "colour": "light grey"},
+    "MR-CARBON": {"part": "Slope 1x1 or 1x1 clip (mirrors)", "qty": 2, "colour": "dark grey"},
+    "MR-CUSTOM": {"part": "Slope 1x1 or 1x1 clip (mirrors)", "qty": 2, "colour_from": "mirror colour"},
+    "BN-FLAT": {"part": "Plate 2x4 + tile 2x4 (bonnet)", "qty": 1, "colour_from": "body paint"},
+    "BN-DOME": {"part": "Curved slope 2x4 (bonnet)", "qty": 1, "colour_from": "body paint"},
+    "BN-VENT": {"part": "Grille tile 1x2 (vents) on plate 2x4", "qty": 2, "colour": "black"},
+    "BN-SCOOP": {"part": "Inverted slope 2x2 + grille 1x2 (scoop) on plate 2x4", "qty": 1, "colour_from": "body paint"},
+    "BN-STRIPE": {"part": "Tile 1x4 (racing stripes) on plate 2x4", "qty": 2, "colour": "white"},
+    "WH-5S-19": {"part": "Wheel hub with 5 spokes (or standard hub)", "qty": 4, "colour": "light grey"},
+    "WH-MS-20": {"part": "Larger wheel with multi-spoke hub", "qty": 4, "colour": "light grey"},
+    "WH-AT-18": {"part": "Large balloon/off-road tyre", "qty": 4, "colour": "black"},
+    "WH-TB-19": {"part": "Round tile 2x2 cover over hub (turbine)", "qty": 4, "colour": "dark grey"},
+    "WH-ST-16": {"part": "Small standard wheel", "qty": 4, "colour": "black"}
+  },
+  "build_steps": [
+    {"step": 1, "station": "ST1 Body-in-white", "task": "Lay the chassis plate. Fit both axle plates at positions 2 and 9 from the front."},
+    {"step": 2, "station": "ST2 Paint shop", "task": "Build the body sides two bricks high using body-colour bricks; leave a 4-stud gap each side for doors."},
+    {"step": 3, "station": "ST3 Closures", "task": "Fit door bricks (door colour) into the gaps, one each side."},
+    {"step": 4, "station": "ST3 Closures", "task": "Build the bonnet module per bonnet option and fit at the front."},
+    {"step": 5, "station": "ST4 Glazing", "task": "Fit the windscreen slope behind the bonnet; add seat and steering wheel if available."},
+    {"step": 6, "station": "ST5 Trim", "task": "Fit both mirrors at the A-pillar either side of the windscreen."},
+    {"step": 7, "station": "ST5 Trim", "task": "Fit headlights (front) and tail lights (rear)."},
+    {"step": 8, "station": "ST6 Chassis marriage", "task": "Fit all four wheels per wheel option; spin each wheel to confirm free rotation."},
+    {"step": 9, "station": "ST7 End of line", "task": "Photograph the car from the side and the front against the white A3 backdrop and run the QA app."}
+  ]
+}

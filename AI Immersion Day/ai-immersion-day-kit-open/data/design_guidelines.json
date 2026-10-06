@@ -1,0 +1,173 @@
+{
+ "_about": "Meridian Motors Design & Engineering Guidelines MY2027 (fictional, illustrative). This is the RAG corpus for Module 3. 'check' blocks are only used by the offline mock judge; the real LLM judge reads 'text'.",
+ "document": "DEG-2027 Exterior Design & Engineering Guidelines",
+ "guidelines": [
+  {
+   "id": "DEG-2.1",
+   "title": "Approved body colour palette",
+   "applies_to": "body_colour",
+   "text": "Production body colours must be selected from the MY2027 approved palette (status 'approved' in the colour catalogue). Limited-edition colours (status 'limited_edition') may be used only for run sizes under 2,000 units and require Brand Council approval. Concept-only colours are not permitted for production.",
+   "check": {
+    "field": "body_paint_status",
+    "pass": [
+     "approved"
+    ],
+    "review": [
+     "limited_edition"
+    ],
+    "fail": [
+     "concept_only",
+     "unknown"
+    ]
+   }
+  },
+  {
+   "id": "DEG-2.2",
+   "title": "Fluorescent and neon finishes",
+   "applies_to": "body_colour",
+   "text": "Fluorescent, neon or day-glo finishes fail UV durability requirements (ISO 16474-2, 2,000 h) and are prohibited on exterior painted panels. They may appear only on concept and show cars.",
+   "check": {
+    "field": "body_paint_finish",
+    "fail": [
+     "fluorescent"
+    ]
+   }
+  },
+  {
+   "id": "DEG-2.3",
+   "title": "Two-tone doors",
+   "applies_to": "door_colour",
+   "text": "Doors must match the body colour. A contrast door or roof colour (two-tone) is permitted only using Obsidian Black (OB-900) or Lunar Silver (LS-450) and only on Sport and GT trims. Any other contrasting door colour requires a design deviation request.",
+   "check": {
+    "field": "door_rule",
+    "pass": [
+     "matches_body"
+    ],
+    "review": [
+     "contrast_black_or_silver"
+    ],
+    "fail": [
+     "other_contrast"
+    ]
+   }
+  },
+  {
+   "id": "DEG-2.4",
+   "title": "Mirror cap finishes",
+   "applies_to": "mirror_colour",
+   "text": "Exterior mirror caps may be body colour, gloss black (MR-GB), Lunar Silver (MR-SILVER) or carbon fibre (MR-CARBON, GT trim only). Custom-painted mirror caps in any other colour are non-standard and not supported by the mirror supplier.",
+   "check": {
+    "field": "mirror_code",
+    "pass": [
+     "MR-BODY",
+     "MR-GB",
+     "MR-SILVER"
+    ],
+    "review": [
+     "MR-CARBON"
+    ],
+    "fail": [
+     "MR-CUSTOM"
+    ]
+   }
+  },
+  {
+   "id": "DEG-3.1",
+   "title": "Bonnet design and pedestrian protection",
+   "applies_to": "bonnet_design",
+   "text": "All bonnet designs must preserve a minimum 75 mm deformation clearance between the bonnet skin and hard engine-bay points to meet UN R127 pedestrian head-impact requirements. Flat, power-dome, vented and striped bonnets are released for all trims.",
+   "check": {
+    "field": "bonnet_code",
+    "pass": [
+     "BN-FLAT",
+     "BN-DOME",
+     "BN-VENT",
+     "BN-STRIPE"
+    ]
+   }
+  },
+  {
+   "id": "DEG-3.2",
+   "title": "Bonnet scoops",
+   "applies_to": "bonnet_design",
+   "text": "A functional bonnet scoop (BN-SCOOP) is restricted to performance (GT) trims because it requires the active pop-up bonnet actuator (AH-01) to retain UN R127 compliance. Selecting a scoop on non-GT trims requires engineering review.",
+   "check": {
+    "field": "bonnet_code",
+    "review": [
+     "BN-SCOOP"
+    ]
+   }
+  },
+  {
+   "id": "DEG-4.1",
+   "title": "Wheel and tyre fitment",
+   "applies_to": "tyre_style",
+   "text": "Released wheel sizes are 16 to 20 inch. 5-spoke, multi-spoke and turbine aero wheels are released for saloon, hatchback and coupe bodies. Steel wheels are fleet-only.",
+   "check": {
+    "field": "wheel_code",
+    "pass": [
+     "WH-5S-19",
+     "WH-MS-20",
+     "WH-TB-19"
+    ],
+    "review": [
+     "WH-ST-16"
+    ]
+   }
+  },
+  {
+   "id": "DEG-4.2",
+   "title": "All-terrain wheels",
+   "applies_to": "tyre_style",
+   "text": "All-terrain wheels and chunky tyres (WH-AT-18) are released only for SUV and pickup bodies because they change ride height and wheel-arch clearance. On any other body style they are not permitted.",
+   "check": {
+    "field": "wheel_code",
+    "fail_unless_body": [
+     "suv",
+     "pickup"
+    ],
+    "codes": [
+     "WH-AT-18"
+    ]
+   }
+  },
+  {
+   "id": "DEG-5.1",
+   "title": "Paint test requirement",
+   "applies_to": "body_colour",
+   "text": "Every production body colour requires a released paint test specification covering colour match (CIELAB Delta E against master panel), gloss, dry film thickness, adhesion, corrosion (neutral salt spray) and accelerated weathering before PPAP sign-off.",
+   "check": {
+    "field": "test_spec_released",
+    "pass": [
+     true
+    ],
+    "review": [
+     false,
+     null
+    ]
+   }
+  },
+  {
+   "id": "DEG-6.1",
+   "title": "Brand character",
+   "applies_to": "overall",
+   "text": "Meridian Motors design language favours clean surfaces, a strong shoulder line and no more than three exterior colours on a single vehicle (body, contrast and trim).",
+   "check": {
+    "field": "colour_count",
+    "max": 3
+   }
+  },
+  {
+   "id": "DEG-6.2",
+   "title": "Chrome reduction",
+   "applies_to": "overall",
+   "text": "Bright chrome trim is being phased out from MY2027 in favour of satin silver or gloss black accents to reduce hexavalent chromium usage in the supply chain."
+  },
+  {
+   "id": "DEG-7.1",
+   "title": "Sketch submission quality",
+   "applies_to": "process",
+   "text": "Design sketches submitted to the review board should show a full side profile, clearly coloured body and doors, visible mirrors, bonnet detailing and wheels. Sketches missing two or more of these elements are returned to the designer."
+  }
+ ]
+}

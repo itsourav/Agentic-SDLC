@@ -1,0 +1,9 @@
+{
+  "_how_to_use": "Continue (VS Code / VSCodium): add this server under mcpServers in ~/.continue/config.yaml (or the Continue settings UI) - fix the absolute path. Open WebUI: run it through mcpo (see docker-compose.yml) and add http://<server>:8000 under Settings > Tools. Any other MCP client: same command + args.",
+  "mcpServers": {
+    "meridian-catalogue": {
+      "command": "python3",
+      "args": ["/ABSOLUTE/PATH/TO/ai-immersion-day-kit-open/module2_multimodal/mcp_server/catalogue_server.py"]
+    }
+  }
+}

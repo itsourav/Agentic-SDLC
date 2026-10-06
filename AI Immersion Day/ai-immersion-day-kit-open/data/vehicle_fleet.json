@@ -1,0 +1,17 @@
+{
+  "_about": "Fictional Meridian Motors line-up used by Module 1 tools. Rebrand before the event.",
+  "vehicles": [
+    {"model": "Aurora EV", "body": "hatchback", "powertrain": "BEV", "battery_kwh": 64, "efficiency_kwh_per_100km": 14.8, "power_kw": 150, "price_from_gbp": 34995, "launch": "2025-03"},
+    {"model": "Vanta GT", "body": "coupe", "powertrain": "BEV", "battery_kwh": 92, "efficiency_kwh_per_100km": 18.9, "power_kw": 390, "price_from_gbp": 68950, "launch": "2026-06"},
+    {"model": "Terra X", "body": "SUV", "powertrain": "PHEV", "battery_kwh": 22, "efficiency_kwh_per_100km": 21.5, "power_kw": 225, "price_from_gbp": 47500, "launch": "2024-09"},
+    {"model": "Civis", "body": "saloon", "powertrain": "HEV", "battery_kwh": 1.6, "efficiency_kwh_per_100km": null, "power_kw": 132, "price_from_gbp": 29400, "launch": "2023-11"},
+    {"model": "Haul 4", "body": "pickup", "powertrain": "BEV", "battery_kwh": 110, "efficiency_kwh_per_100km": 26.0, "power_kw": 340, "price_from_gbp": 59990, "launch": "2026-01"}
+  ],
+  "dealer_stock": {
+    "Aurora EV": {"London": 14, "Manchester": 6, "Birmingham": 0},
+    "Vanta GT": {"London": 2, "Manchester": 0, "Birmingham": 1},
+    "Terra X": {"London": 9, "Manchester": 11, "Birmingham": 7},
+    "Civis": {"London": 21, "Manchester": 15, "Birmingham": 12},
+    "Haul 4": {"London": 0, "Manchester": 3, "Birmingham": 4}
+  }
+}

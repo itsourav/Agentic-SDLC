@@ -1,0 +1,14 @@
+{
+  "_about": "Module 4 guardrail policy for the Supply Chain agent. Input rails run before the model; output rails run after.",
+  "input_rails": [
+    {"id": "IN-01", "name": "Prompt injection", "action": "block", "patterns": ["ignore (all|any|previous|prior) instructions", "disregard (the|your) (rules|system prompt)", "you are now", "reveal (your|the) system prompt", "act as (dan|an unrestricted)"]},
+    {"id": "IN-02", "name": "Personal data", "action": "redact", "patterns": ["[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "\\+?\\d[\\d \\-]{9,}\\d"]},
+    {"id": "IN-03", "name": "Off-topic", "action": "block", "allowed_topics": ["part", "supplier", "lead time", "stock", "dependency", "depend", "alternative", "risk", "spec", "bonnet", "wheel", "mirror", "paint", "chip", "mcu", "aluminium", "tyre", "colour", "bom", "graph", "shortage", "disruption", "impact"]},
+    {"id": "IN-04", "name": "Commercially confidential request", "action": "block", "patterns": ["(unit )?cost", "price", "margin", "contract value", "how much do we pay"]}
+  ],
+  "output_rails": [
+    {"id": "OUT-01", "name": "Groundedness", "action": "flag", "rule": "Every part, option or supplier ID in the answer (pattern [A-Z]{2,5}-[A-Z0-9-]+) must exist in the knowledge graph."},
+    {"id": "OUT-02", "name": "Confidential field leak", "action": "redact", "rule": "Remove any euro amount or mention of unit_cost_eur."},
+    {"id": "OUT-03", "name": "Tone & scope", "action": "flag", "rule": "Answer must not make purchasing commitments (e.g. 'I have ordered', 'PO raised')."}
+  ]
+}
